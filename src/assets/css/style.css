@@ -506,7 +506,7 @@ a{
 	background-repeat: no-repeat;
 	background-position:center;
 	background-size: cover;
-	animation: morph 8s ease-in-out infinite 1s;
+	animation: morph 8s ease-in-out infinite;
 	background-blend-mode: multiply;
 	-webkit-box-shadow: inset 0px 0px 0px 9px rgba(255,255,255,.3);
     -moz-box-shadow: inset 0px 0px 0px 9px rgba(255,255,255,.3);

@@ -25,23 +25,23 @@ export default function MenuBar() {
       <div className="tokyo_tm_mobile_menu">
         <div className="menu_list">
           <ul className="transition_link">
-            <li className="active">
+            <li>
               <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/">Service</Link>
+              <Link to="/service">Service</Link>
             </li>
             <li>
-              <Link to="/">Portfolio</Link>
+              <Link to="/portfolio">Portfolio</Link>
             </li>
             <li>
-              <Link to="/">News</Link>
+              <Link to="/news">News</Link>
             </li>
             <li>
-              <Link to="/">Contact</Link>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>
@@ -57,23 +57,23 @@ export default function MenuBar() {
           </div>
           <div className="menu">
             <ul className="transition_link">
-            <li className="active">
+            <li>
               <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/">Service</Link>
+              <Link to="/service">Service</Link>
             </li>
             <li>
-              <Link to="/">Portfolio</Link>
+              <Link to="/portfolio">Portfolio</Link>
             </li>
             <li>
-              <Link to="/">News</Link>
+              <Link to="/news">News</Link>
             </li>
             <li>
-              <Link to="/">Contact</Link>
+              <Link to="/contact">Contact</Link>
             </li>
             </ul>
           </div>
