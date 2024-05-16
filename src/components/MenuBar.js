@@ -70,7 +70,7 @@ export default function MenuBar() {
               <Link to="/portfolio">Portfolio</Link>
             </li>
             <li>
-              <Link to="/news">News</Link>
+              <Link to="/news">Appreciation</Link>
             </li>
             <li>
               <Link to="/contact">Contact</Link>
@@ -81,9 +81,9 @@ export default function MenuBar() {
             <p>
               &copy; 2023 Dhara Pancholi
               <br />
-              Created by 
+              Created by &nbsp;
               <Link href="/" target="_blank">
-                INP
+                 I N P
               </Link>
             </p>
           </div>

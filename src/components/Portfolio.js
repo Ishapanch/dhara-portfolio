@@ -1,34 +1,160 @@
-import React from 'react'
-import img5 from '../assets/img/portfolio/5.jpg'
+import React from "react";
+import { ImageGallery } from "react-image-grid-gallery";
+import chair1 from "../assets/img/portfolio/chair1.jpg";
+import chair2 from "../assets/img/portfolio/chair2.jpg";
+import gollem from "../assets/img/portfolio/gollem.jpg";
+import lighthouse from "../assets/img/portfolio/lighthouse.jpg";
+import raw1 from "../assets/img/portfolio/raw1.jpg";
+import raw2 from "../assets/img/portfolio/raw2.jpg";
+import raw3 from "../assets/img/portfolio/raw3.jpg";
+import raw4 from "../assets/img/portfolio/raw4.jpg";
+import raw5 from "../assets/img/portfolio/raw5.jpg";
+import wireframe from "../assets/img/portfolio/wireframe.jpg";
+import wireframe2 from "../assets/img/portfolio/wireframe2.jpg";
+import { Container } from "react-bootstrap";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 
 export default function Portfolio() {
+  const colors = [
+    {
+      alt: "Image1's alt text",
+      src: chair1,
+    },
+    {
+      alt: "Image1's alt text",
+      src: chair2,
+    },
+    {
+        alt: "Image1's alt text",
+        src: gollem,
+      },
+      {
+        alt: "Image1's alt text",
+        src: lighthouse,
+      },
+  ];
+  const raws = [
+    {
+      alt: "Image1's alt text",
+      src: raw1,
+    },
+    {
+        alt: "Image1's alt text",
+        src: raw2,
+      },
+      {
+        alt: "Image1's alt text",
+        src: raw3,
+      },
+      {
+        alt: "Image1's alt text",
+        src: raw4,
+      },
+      {
+        alt: "Image1's alt text",
+        src: raw5,
+      },
+  ];
+  const wireframes = [
+    {
+      alt: "Image1's alt text",
+      src: wireframe,
+    },
+    {
+        alt: "Image1's alt text",
+        src: wireframe2,
+      },
+  ];
   return (
     <div>
-       <div className="tokyo_tm_portfolio_titles"></div>
+      <div className="tokyo_tm_portfolio_titles"></div>
 
-<div id="portfolio" className="tokyo_tm_section">
-    <div className="container">
-        <div className="tokyo_tm_portfolio">
-            <div className="tokyo_tm_title">
-                <div className="title_flex">
-                    <div className="left">
-                        <span>Portfolio</span>
-                        <h3>Creative Portfolio</h3>
-                    </div>
-                    <div className="portfolio_filter">
-                        <ul>
-                            <li><a href="#" className="current" data-filter="*">All</a></li>
-                            <li><a href="#" data-filter=".vimeo">Vimeo</a></li>
-                            <li><a href="#" data-filter=".youtube">Youtube</a></li>
-                            <li><a href="#" data-filter=".soundcloud">Soundcloud</a></li>
-                            <li><a href="#" data-filter=".image">Image</a></li>
-                            <li><a href="#" data-filter=".detail">Detail</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div className="list_wrapper">
-                <ul className="portfolio_list gallery_zoom">
+      <div id="portfolio" className="tokyo_tm_section">
+        <div className="container">
+          <div className="tokyo_tm_portfolio">
+            <Tabs className="tabs-list">
+              <div className="tokyo_tm_title">
+                <Row className="">
+                  <Col className="left" lg={12} md={12}>
+                    <span>Portfolio</span>
+                  </Col>
+                  
+                </Row>
+                <Row>
+                <Col className="left" lg={6} md={12}>
+                    <h3>Creative Portfolio</h3>
+                  </Col>
+
+                  <Col lg={6} md={12} className="portfolio_filter">
+                    <TabList>
+                      <Tab>Design</Tab>
+                      <Tab>Raw File</Tab>
+                      <Tab>Wireframe</Tab>
+                    </TabList>
+
+                  </Col>
+                </Row>
+              </div>
+              <Row>
+                <Col lg={12} md={12} className="list_wrapper">
+                  <TabPanel>
+                    <Row>
+                      {colors.map((color, index) => (
+                        <Col lg={4} md={6} key={index}>
+                          <ImageGallery
+                            imagesInfoArray={[color]}
+                            columnWidth="100%"
+                          />
+                        </Col>
+                      ))}
+                    </Row>
+                  </TabPanel>
+
+                  <TabPanel>
+                    <Row>
+                      {raws.map((raw, index) => (
+                        <Col lg={4} md={6} key={index}>
+                          <ImageGallery
+                            imagesInfoArray={[raw]}
+                            columnWidth="100%"
+                          />
+                        </Col>
+                      ))}
+                    </Row>
+                  </TabPanel>
+
+                  <TabPanel>
+                    <Row>
+                      {wireframes.map((frame, index) => (
+                        <Col lg={4} md={6} key={index}>
+                          <ImageGallery
+                            imagesInfoArray={[frame]}
+                            columnWidth="100%"
+                          />
+                        </Col>
+                      ))}
+                    </Row>
+                  </TabPanel>
+                </Col>
+              </Row>
+            </Tabs>
+            {/* <div className="list_wrapper"> */}
+            {/* <Container>
+                <Row>
+                  {color.map((color, index) => (
+                    <Col lg={4} md={6} key={index}>
+                      <ImageGallery
+                        imagesInfoArray={[color]}
+                        columnWidth="100%"
+                      />
+                    </Col>
+                  ))}
+                </Row>
+              </Container> */}
+            {/* <ul className="portfolio_list gallery_zoom">
                     <li className="vimeo">
                         <div className="inner">
                             <div className="entry tokyo_tm_portfolio_animation_wrap"
@@ -265,11 +391,11 @@ export default function Portfolio() {
                         </div>
 
                     </li>
-                </ul>
-            </div>
+                </ul> */}
+            {/* </div> */}
+          </div>
         </div>
+      </div>
     </div>
-</div>
-    </div>
-  )
+  );
 }

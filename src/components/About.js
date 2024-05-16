@@ -1,28 +1,32 @@
 import React from "react";
 import img1 from './../assets/img/dhara1.jpg'
+import img2 from './../assets/img/dhara-bw.jpg'
+import { Container } from "react-bootstrap";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 export default function About() {
   return (
     <div className="ml-5">
       <div id="about" className="tokyo_tm_section">
         <div className="container">
-          <div className="tokyo_tm_about">
-            <div className="tokyo_tm_title">
+          <Row className="tokyo_tm_about">
+            <Col lg={12} className="tokyo_tm_title">
               <div className="title_flex">
                 <div className="left">
                   <span>About</span>
                   <h3>About Me</h3>
                 </div>
               </div>
-            </div>
-            <div className="top_author_image">
-              <img src={img1} className="w-100"alt />
-            </div>
-            <div className="about_title">
+            </Col>
+            <Col lg={4} className="top_author_image d-flex">
+              <img src={img2} className="w-100"alt />
+            </Col>
+            <Col lg={8} className="about_title">
               <h3>Dhara Pancholi</h3>
               <span>Position </span>
-            </div>
-            <div className="about_text">
+            </Col>
+            <Col lg={12} className="about_text">
               <p>
                 Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu...
                 Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu...
@@ -37,8 +41,8 @@ export default function About() {
                 Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu...
                 Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu...
               </p>
-            </div>
-            <div className="tokyo_tm_short_info">
+            </Col>
+            <Col lg={12} className="tokyo_tm_short_info">
               <div className="left">
                 <div className="tokyo_tm_info">
                   <ul>
@@ -98,13 +102,13 @@ export default function About() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </Col>
             <div className="tokyo_tm_button" data-position="left">
               <a href="img/cv/1.jpg" download>
                 <span>Download CV</span>
               </a>
             </div>
-          </div>
+          </Row>
         </div>
         <div className="tokyo_tm_progressbox">
           <div className="container">
