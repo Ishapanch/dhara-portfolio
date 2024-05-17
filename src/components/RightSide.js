@@ -12,8 +12,8 @@ export default function RightSide() {
   return (
     <BrowserRouter>
     <MenuBar />
-    <div class="rightpart">
-      <div class="rightpart_in">
+    <div className="rightpart">
+      <div className="rightpart_in">
        
           
           <Routes>

@@ -4,18 +4,30 @@ import chair1 from "../assets/img/portfolio/chair1.jpg";
 import chair2 from "../assets/img/portfolio/chair2.jpg";
 import gollem from "../assets/img/portfolio/gollem.jpg";
 import lighthouse from "../assets/img/portfolio/lighthouse.jpg";
+import cup from "../assets/img/portfolio/cup.jpg";
+import castle from "../assets/img/portfolio/castle.jpg";
 import raw1 from "../assets/img/portfolio/raw1.jpg";
 import raw2 from "../assets/img/portfolio/raw2.jpg";
 import raw3 from "../assets/img/portfolio/raw3.jpg";
 import raw4 from "../assets/img/portfolio/raw4.jpg";
 import raw5 from "../assets/img/portfolio/raw5.jpg";
+import raw6 from "../assets/img/portfolio/raw6.jpg";
+import raw7 from "../assets/img/portfolio/raw7.jpg";
+import raw8 from "../assets/img/portfolio/raw8.jpg";
+import raw9 from "../assets/img/portfolio/raw9.jpg";
+import raw10 from "../assets/img/portfolio/raw10.jpg";
+import raw11 from "../assets/img/portfolio/raw11.jpg";
+import raw12 from "../assets/img/portfolio/raw12.jpg";
 import wireframe from "../assets/img/portfolio/wireframe.jpg";
 import wireframe2 from "../assets/img/portfolio/wireframe2.jpg";
+import vid1 from "../assets/img/portfolio/video/gollem.mp4"
+import vid2 from "../assets/img/portfolio/video/chair.mp4"
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import ReactPlayer from "react-player";
 
 export default function Portfolio() {
   const colors = [
@@ -28,13 +40,21 @@ export default function Portfolio() {
       src: chair2,
     },
     {
-        alt: "Image1's alt text",
-        src: gollem,
-      },
-      {
-        alt: "Image1's alt text",
-        src: lighthouse,
-      },
+      alt: "Image1's alt text",
+      src: gollem,
+    },
+    {
+      alt: "Image1's alt text",
+      src: lighthouse,
+    },
+    {
+      alt: "Image1's alt text",
+      src: castle,
+    },
+    {
+      alt: "Image1's alt text",
+      src: cup,
+    },
   ];
   const raws = [
     {
@@ -42,21 +62,49 @@ export default function Portfolio() {
       src: raw1,
     },
     {
-        alt: "Image1's alt text",
-        src: raw2,
-      },
-      {
-        alt: "Image1's alt text",
-        src: raw3,
-      },
-      {
-        alt: "Image1's alt text",
-        src: raw4,
-      },
-      {
-        alt: "Image1's alt text",
-        src: raw5,
-      },
+      alt: "Image1's alt text",
+      src: raw2,
+    },
+    {
+      alt: "Image1's alt text",
+      src: raw3,
+    },
+    {
+      alt: "Image1's alt text",
+      src: raw4,
+    },
+    {
+      alt: "Image1's alt text",
+      src: raw5,
+    },
+    {
+      alt: "Image1's alt text",
+      src: raw6,
+    },
+    {
+      alt: "Image1's alt text",
+      src: raw7,
+    },
+    {
+      alt: "Image1's alt text",
+      src: raw8,
+    },
+    {
+      alt: "Image1's alt text",
+      src: raw9,
+    },
+    {
+      alt: "Image1's alt text",
+      src: raw10,
+    },
+    {
+      alt: "Image1's alt text",
+      src: raw11,
+    },
+    {
+      alt: "Image1's alt text",
+      src: raw12,
+    },
   ];
   const wireframes = [
     {
@@ -64,10 +112,24 @@ export default function Portfolio() {
       src: wireframe,
     },
     {
-        alt: "Image1's alt text",
-        src: wireframe2,
-      },
+      alt: "Image1's alt text",
+      src: wireframe2,
+    },
   ];
+
+  const videos = [
+    {
+      url: vid1,
+      title: "Gollem Video 3D",
+      description: "Gollem Video 3D",
+    },
+    {
+      url: vid2,
+      title: "Chair Video 3D",
+      description: "Gollem Video 3D",
+    },
+  ];
+
   return (
     <div>
       <div className="tokyo_tm_portfolio_titles"></div>
@@ -81,10 +143,9 @@ export default function Portfolio() {
                   <Col className="left" lg={12} md={12}>
                     <span>Portfolio</span>
                   </Col>
-                  
                 </Row>
                 <Row>
-                <Col className="left" lg={6} md={12}>
+                  <Col className="left" lg={6} md={12}>
                     <h3>Creative Portfolio</h3>
                   </Col>
 
@@ -93,8 +154,8 @@ export default function Portfolio() {
                       <Tab>Design</Tab>
                       <Tab>Raw File</Tab>
                       <Tab>Wireframe</Tab>
+                      <Tab>Videos</Tab>
                     </TabList>
-
                   </Col>
                 </Row>
               </div>
@@ -137,6 +198,21 @@ export default function Portfolio() {
                         </Col>
                       ))}
                     </Row>
+                  </TabPanel>
+                  <TabPanel>
+                    {videos.map((video, index) => (
+                      <Col lg={6} md={6} className="video-thumbnail">
+                        <ReactPlayer
+                          url={video.url}
+                          width="100%"
+                          height="100%"
+                          controls={true}
+                          className="react-player"
+                        />
+                        <h3>{video.title}</h3>
+                        <p>{video.description}</p>
+                      </Col>
+                    ))}
                   </TabPanel>
                 </Col>
               </Row>

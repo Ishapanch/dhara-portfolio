@@ -2595,3 +2595,50 @@ body.modal{
 	.tokyo_tm_modalbox .description_wrap:before{height: 20px;}
 	.tokyo_tm_modalbox .portfolio_main_title{margin-bottom: 20px;}
 }
+.modal-open .modal.service-modal.fade:not(.show){
+	opacity: 0;
+}
+.modal-open .modal.service-modal{
+	opacity: 1;
+}
+
+.modal-backdrop.show{
+	opacity: 0.8;
+}
+.service-modal .modal-body{
+	padding: 50px;
+	background-color: #fff;
+}
+.service-modal .modal-body .service-img{
+	margin-bottom: 40px;
+}
+.service-modal button.btn-close {
+    border: 2px solid #000;
+	opacity: 1;
+	filter: invert(1);
+	margin: 0;
+	border-radius: 10px;
+	padding: 10px;
+	transition: all .3s ease;
+}
+
+.service-modal button.btn-close:hover{
+	border-radius: 50%;
+}
+
+.service-modal button.btn-close::after{
+	color: #fff;
+}
+.service-modal .modal-content{
+	background-color: transparent;
+	box-shadow: none;
+	border: 0;
+}
+.service-modal .modal-header {
+    border: 0;
+    position: relative;
+	align-self: end;
+    z-index: 9;
+    right: -80px;
+    top: 50px;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import img1 from './../assets/img/dhara1.jpg'
-import img2 from './../assets/img/dhara-bw.jpg'
+import img2 from './../assets/img/dhara-bg.jpg'
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -20,7 +20,7 @@ export default function About() {
               </div>
             </Col>
             <Col lg={4} className="top_author_image d-flex">
-              <img src={img2} className="w-100"alt />
+              <img src={img2} className="w-100" alt />
             </Col>
             <Col lg={8} className="about_title">
               <h3>Dhara Pancholi</h3>
@@ -28,18 +28,20 @@ export default function About() {
             </Col>
             <Col lg={12} className="about_text">
               <p>
-                Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu...
-                Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu...
-                Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu...
-                Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu...
-                Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu...
+                Passionate about bringing imagination to life through the realm
+                of 3D animation and digital art. Proficient in Blender, Maya,
+                Photoshop, and sculpting techniques. Experienced in creating
+                visually stunning animations and graphics for various projects
+                ranging from film and advertising to video games . Dedicated to
+                continuous learning and pushing creative boundaries.
               </p>
               <p>
-              Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu...
-                Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu...
-                Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu...
-                Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu...
-                Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu...
+                Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi
+                Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu
+                Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu...
+                Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi
+                Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu
+                Gandi Chuu... Hu Gandi Chuu...
               </p>
             </Col>
             <Col lg={12} className="tokyo_tm_short_info">
@@ -61,10 +63,7 @@ export default function About() {
                     <li>
                       <span>Email:</span>
                       <span>
-                        <a href="">
-                          
-                            email_avse.ahiya@gmail.com
-                        </a>
+                        <a href="">email_avse.ahiya@gmail.com</a>
                       </span>
                     </li>
                     <li>
@@ -208,7 +207,7 @@ export default function About() {
                     <li>
                       <span>
                         <img className="svg" src="img/svg/rightarrow.svg" alt />
-                        Vasan Ghasvu 
+                        Vasan Ghasvu
                       </span>
                     </li>
                     <li>
@@ -220,7 +219,7 @@ export default function About() {
                     <li>
                       <span>
                         <img className="svg" src="img/svg/rightarrow.svg" alt />
-                        Panchyat Karvi 
+                        Panchyat Karvi
                       </span>
                     </li>
                     <li>
@@ -232,7 +231,7 @@ export default function About() {
                     <li>
                       <span>
                         <img className="svg" src="img/svg/rightarrow.svg" alt />
-                       Being Irritating
+                        Being Irritating
                       </span>
                     </li>
                   </ul>
@@ -374,8 +373,15 @@ export default function About() {
           <div className="container">
             <div className="tokyo_section_title">
               <h3>Testimonials</h3>
-              <p> Tarif hoi toh testimonial hoi ne ... <br/> Rakh tere maa ki Rakh ....!!</p>
-              <p> Yeh Baburao ka stylee haiii  <br/> It's Legendaryyyyyyyyyyyyy</p>
+              <p>
+                {" "}
+                Tarif hoi toh testimonial hoi ne ... <br /> Rakh tere maa ki
+                Rakh ....!!
+              </p>
+              <p>
+                {" "}
+                Yeh Baburao ka stylee haiii <br /> It's Legendaryyyyyyyyyyyyy
+              </p>
             </div>
             <div className="list">
               <ul className="owl-carousel">
@@ -383,7 +389,8 @@ export default function About() {
                   <div className="list_inner">
                     <div className="text">
                       <p>
-                        Subah se na ek aloo bika hai , na bika ek adha kandaa ..!!!
+                        Subah se na ek aloo bika hai , na bika ek adha kandaa
+                        ..!!!
                       </p>
                     </div>
                     <div className="details">
@@ -403,9 +410,7 @@ export default function About() {
                 <li>
                   <div className="list_inner">
                     <div className="text">
-                      <p>
-                        Its Lavioosaaa , not laviiiiiiosa ...!
-                      </p>
+                      <p>Its Lavioosaaa , not laviiiiiiosa ...!</p>
                     </div>
                     <div className="details">
                       <div className="image">
@@ -425,7 +430,8 @@ export default function About() {
                   <div className="list_inner">
                     <div className="text">
                       <p>
-                        Badi soni mundi hai , badi soni kundi hai , badi soni GUNDI hai !!
+                        Badi soni mundi hai , badi soni kundi hai , badi soni
+                        GUNDI hai !!
                       </p>
                     </div>
                     <div className="details">
