@@ -292,7 +292,8 @@ a{
 	top: 50px;
 	right: -200px;
 	height: 100vh;
-	width: 200px;
+	width: fit-content;
+	padding: 0 20px ;
 	z-index: 15;
 	background-color: #fff;
 	
@@ -311,7 +312,7 @@ a{
 	clear: both;
 	float: left;
 	text-align: right;
-	padding: 100px 20px 0px 20px;
+	padding: 40px 20px ;
 }
 .tokyo_tm_mobile_menu .menu_list ul{
 	margin: 0px;

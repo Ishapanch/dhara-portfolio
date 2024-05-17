@@ -1,8 +1,20 @@
-import React from "react";
+import React  ,{useState} from "react";
 import logo from "./../assets/img/logo/logo.png";
 import { Link } from "react-router-dom";
 
 export default function MenuBar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+  const subDivStyle = {
+    display: isOpen ? 'block' : 'none',
+   right : 0,
+  };
   return (
     <div>
       <div className="tokyo_tm_topbar">
@@ -15,33 +27,33 @@ export default function MenuBar() {
           </div>
           <div className="trigger">
             <div className="hamburger hamburger--slider">
-              <div className="hamburger-box">
+              <div className="hamburger-box" onClick={toggleMenu}>
                 <div className="hamburger-inner"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="tokyo_tm_mobile_menu">
+      <div className="tokyo_tm_mobile_menu"  style={subDivStyle}>
         <div className="menu_list">
           <ul className="transition_link">
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/"  onClick={closeMenu}>Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about"  onClick={closeMenu}>About</Link>
             </li>
             <li>
-              <Link to="/service">Service</Link>
+              <Link to="/service"  onClick={closeMenu}>Service</Link>
             </li>
             <li>
-              <Link to="/portfolio">Portfolio</Link>
+              <Link to="/portfolio"  onClick={closeMenu}>Portfolio</Link>
             </li>
             <li>
-              <Link to="/news">News</Link>
+              <Link to="/news"  onClick={closeMenu}>News</Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact"  onClick={closeMenu}>Contact</Link>
             </li>
           </ul>
         </div>
