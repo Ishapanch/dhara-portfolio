@@ -18,6 +18,14 @@ import raw9 from "../assets/img/portfolio/raw9.jpg";
 import raw10 from "../assets/img/portfolio/raw10.jpg";
 import raw11 from "../assets/img/portfolio/raw11.jpg";
 import raw12 from "../assets/img/portfolio/raw12.jpg";
+import tool1 from "../assets/img/portfolio/tool1.jpg";
+import tool2 from "../assets/img/portfolio/tool2.jpg";
+import tool3 from "../assets/img/portfolio/tool3.jpg";
+import tool4 from "../assets/img/portfolio/tool4.jpg";
+import tool5 from "../assets/img/portfolio/tool5.jpg";
+import tool6 from "../assets/img/portfolio/tool6.jpg";
+import tool7 from "../assets/img/portfolio/tool7.jpg";
+import tool8 from "../assets/img/portfolio/tool8.jpg";
 import wireframe from "../assets/img/portfolio/wireframe.jpg";
 import wireframe2 from "../assets/img/portfolio/wireframe2.jpg";
 import vid1 from "../assets/img/portfolio/video/gollem.mp4"
@@ -54,6 +62,38 @@ export default function Portfolio() {
     {
       alt: "Image1's alt text",
       src: cup,
+    },
+    {
+      alt: "Image1's alt text",
+      src: tool1,
+    },
+    {
+      alt: "Image1's alt text",
+      src: tool2,
+    },
+    {
+      alt: "Image1's alt text",
+      src: tool3,
+    },
+    {
+      alt: "Image1's alt text",
+      src: tool4,
+    },
+    {
+      alt: "Image1's alt text",
+      src: tool5,
+    },
+    {
+      alt: "Image1's alt text",
+      src: tool6,
+    },
+    {
+      alt: "Image1's alt text",
+      src: tool7,
+    },
+    {
+      alt: "Image1's alt text",
+      src: tool8,
     },
   ];
   const raws = [
@@ -126,7 +166,7 @@ export default function Portfolio() {
     {
       url: vid2,
       title: "Chair Video 3D",
-      description: "Gollem Video 3D",
+      description: "Chair Video 3D",
     },
   ];
 
@@ -162,7 +202,7 @@ export default function Portfolio() {
               <Row>
                 <Col lg={12} md={12} className="list_wrapper">
                   <TabPanel>
-                    <Row>
+                    {/* <Row className="img-gal">
                       {colors.map((color, index) => (
                         <Col lg={4} md={6} key={index}>
                           <ImageGallery
@@ -171,11 +211,23 @@ export default function Portfolio() {
                           />
                         </Col>
                       ))}
+                    </Row> */}
+                    <Row className="img-gal">
+                      {/* {colors.map((color, index) => ( */}
+                        <Col lg={12} md={12} >
+                          <ImageGallery
+                            imagesInfoArray={colors.map((color, index) => (color))}
+                            columnCount={"auto"}
+                            columnWidth={230}
+                            gapSize={24}
+                          />
+                        </Col>
+                      {/* ))} */}
                     </Row>
                   </TabPanel>
 
                   <TabPanel>
-                    <Row>
+                    <Row className="img-gal">
                       {raws.map((raw, index) => (
                         <Col lg={4} md={6} key={index}>
                           <ImageGallery
@@ -188,7 +240,7 @@ export default function Portfolio() {
                   </TabPanel>
 
                   <TabPanel>
-                    <Row>
+                    <Row className="img-gal">
                       {wireframes.map((frame, index) => (
                         <Col lg={4} md={6} key={index}>
                           <ImageGallery

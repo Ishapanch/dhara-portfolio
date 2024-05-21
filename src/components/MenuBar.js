@@ -17,12 +17,15 @@ export default function MenuBar() {
   };
   return (
     <div>
+
+      {/* Mobile Header */}
       <div className="tokyo_tm_topbar">
         <div className="topbar_inner">
           <div className="logo" data-type="image">
             <Link to="/">
-              <img src={logo} alt />
+              {/* <img src={logo} alt /> */}
               <h3>DHARA</h3>
+              {/* <h3>PANCHOLI</h3> */}
             </Link>
           </div>
           <div className="trigger">
@@ -34,6 +37,7 @@ export default function MenuBar() {
           </div>
         </div>
       </div>
+      {/* Desktop Header */}
       <div className="tokyo_tm_mobile_menu"  style={subDivStyle}>
         <div className="menu_list">
           <ul className="transition_link">
@@ -63,8 +67,9 @@ export default function MenuBar() {
         <div className="leftpart_inner">
           <div className="logo" data-type="image">
             <Link to="/">
-              <img src={logo} alt />
+              {/* <img src={logo} alt /> */}
               <h3>DHARA</h3>
+              <h3>PANCHOLI</h3>
             </Link>
           </div>
           <div className="menu">
