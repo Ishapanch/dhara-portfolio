@@ -1,11 +1,30 @@
 import React from "react";
-import img1 from './../assets/img/dhara1.jpg'
-import img2 from './../assets/img/dhara-bg.jpg'
-import { Container } from "react-bootstrap";
+import img2 from "./../assets/img/dhara-bg.jpg";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import {
+  MDBCarousel,
+  MDBCarouselItem,
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBIcon,
+} from "mdb-react-ui-kit";
+import dummy from "../assets/img/dummy.jpg";
+import rightarrow from "../assets/img/svg/rightarrow.svg";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function About() {
+  var settings = {
+    autoplay: false,
+    dots: true,
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    speed: 1000,
+  };
   return (
     <div className="ml-5">
       <div id="about" className="tokyo_tm_section">
@@ -206,31 +225,31 @@ export default function About() {
                   <ul>
                     <li>
                       <span>
-                        <img className="svg" src="img/svg/rightarrow.svg" alt />
+                        <img className="svg" src={rightarrow} alt />
                         Vasan Ghasvu
                       </span>
                     </li>
                     <li>
                       <span>
-                        <img className="svg" src="img/svg/rightarrow.svg" alt />
+                        <img className="svg" src={rightarrow} alt />
                         Unghvu
                       </span>
                     </li>
                     <li>
                       <span>
-                        <img className="svg" src="img/svg/rightarrow.svg" alt />
+                        <img className="svg" src={rightarrow} alt />
                         Panchyat Karvi
                       </span>
                     </li>
                     <li>
                       <span>
-                        <img className="svg" src="img/svg/rightarrow.svg" alt />
+                        <img className="svg" src={rightarrow} alt />
                         Khavuu (My Fav)
                       </span>
                     </li>
                     <li>
                       <span>
-                        <img className="svg" src="img/svg/rightarrow.svg" alt />
+                        <img className="svg" src={rightarrow} alt />
                         Being Irritating
                       </span>
                     </li>
@@ -245,31 +264,31 @@ export default function About() {
                   <ul>
                     <li>
                       <span>
-                        <img className="svg" src="img/svg/rightarrow.svg" alt />
+                        <img className="svg" src={rightarrow} alt />
                         Make Lame Jokes
                       </span>
                     </li>
                     <li>
                       <span>
-                        <img className="svg" src="img/svg/rightarrow.svg" alt />
+                        <img className="svg" src={rightarrow} alt />
                         Watch Pakistani Series
                       </span>
                     </li>
                     <li>
                       <span>
-                        <img className="svg" src="img/svg/rightarrow.svg" alt />
+                        <img className="svg" src={rightarrow} alt />
                         Nakhra
                       </span>
                     </li>
                     <li>
                       <span>
-                        <img className="svg" src="img/svg/rightarrow.svg" alt />
+                        <img className="svg" src={rightarrow} alt />
                         Pajavanu bija ne
                       </span>
                     </li>
                     <li>
                       <span>
-                        <img className="svg" src="img/svg/rightarrow.svg" alt />
+                        <img className="svg" src={rightarrow} alt />
                         Make Kese Dhillo
                       </span>
                     </li>
@@ -371,83 +390,71 @@ export default function About() {
         </div>
         <div className="tokyo_tm_testimonials">
           <div className="container">
-            <div className="tokyo_section_title">
+            <div class="tokyo_section_title">
               <h3>Testimonials</h3>
-              <p>
-                {" "}
-                Tarif hoi toh testimonial hoi ne ... <br /> Rakh tere maa ki
-                Rakh ....!!
-              </p>
-              <p>
-                {" "}
-                Yeh Baburao ka stylee haiii <br /> It's Legendaryyyyyyyyyyyyy
-              </p>
             </div>
             <div className="list">
-              <ul className="owl-carousel">
-                <li>
-                  <div className="list_inner">
-                    <div className="text">
-                      <p>
-                        Subah se na ek aloo bika hai , na bika ek adha kandaa
-                        ..!!!
-                      </p>
-                    </div>
-                    <div className="details">
-                      <div className="image">
-                        <div
-                          className="main"
-                          data-img-url="img/testimonials/1.jpg"
-                        ></div>
+              <ul>
+                <Slider {...settings}>
+                  <li>
+                    <div class="list_inner">
+                      <div class="text">
+                        <p>
+                          Beautiful minimalist design and great, fast response
+                          with support. Highly recommend. Thanks Marketify!
+                        </p>
                       </div>
-                      <div className="info">
-                        <h3>Uday Shetyy</h3>
-                        <span>Controllll</span>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="list_inner">
-                    <div className="text">
-                      <p>Its Lavioosaaa , not laviiiiiiosa ...!</p>
-                    </div>
-                    <div className="details">
-                      <div className="image">
-                        <div
-                          className="main"
-                          data-img-url="img/testimonials/2.jpg"
-                        ></div>
-                      </div>
-                      <div className="info">
-                        <h3>Chapli Hermoine</h3>
-                        <span>Girraffe indor</span>
+                      <div class="details">
+                        <div class="image">
+                         <img src={dummy} className="main"/>
+                        </div>
+                        <div class="info">
+                          <h3>Niraj Pancholi</h3>
+                          <span>Graphic Designer</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="list_inner">
-                    <div className="text">
-                      <p>
-                        Badi soni mundi hai , badi soni kundi hai , badi soni
-                        GUNDI hai !!
-                      </p>
-                    </div>
-                    <div className="details">
-                      <div className="image">
-                        <div
-                          className="main"
-                          data-img-url="img/testimonials/3.jpg"
-                        ></div>
+                  </li>
+                  <li>
+                    <div class="list_inner">
+                      <div class="text">
+                        <p>
+                          These people really know what they are doing! Great
+                          customer support availability and supperb kindness.
+                        </p>
                       </div>
-                      <div className="info">
-                        <h3>Isha </h3>
-                        <span>Legend</span>
+                      <div class="details">
+                        <div class="image">
+                        <img src={dummy} className="main"/>
+                        </div>
+                        <div class="info">
+                          <h3>Nehal Pancholi</h3>
+                          <span>Content Manager</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </li>
+                  </li>
+                  <li>
+                    <div class="list_inner">
+                      <div class="text">
+                        <p>
+                          I had a little problem and the support was just
+                          awesome to quickly solve the situation. And keep going
+                          on.
+                        </p>
+                      </div>
+                      <div class="details">
+                        <div class="image">
+                        <img src={dummy} className="main"/>
+                        </div>
+                        <div class="info">
+                          <h3>Isha Pancholi</h3>
+                          <span>English Teacher</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </Slider>
               </ul>
             </div>
           </div>

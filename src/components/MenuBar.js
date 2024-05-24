@@ -96,7 +96,7 @@ export default function MenuBar() {
           </div>
           <div className="copyright">
             <p>
-              &copy; 2023 Dhara Pancholi
+              &copy; 2024 Dhara Pancholi
               <br />
               Created by &nbsp;
               <Link href="/" target="_blank">
