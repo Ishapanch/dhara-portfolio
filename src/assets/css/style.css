@@ -959,6 +959,9 @@ a:hover{
 	top: 50%;
 	transform: translateY(-50%);
 }
+.dark-theme .tokyo_tm_skill_list ul li .svg {
+    filter: invert(0);
+}
 .tokyo_tm_skill_list.contact ul li span {
 	padding-left: 20px;
 }
@@ -1128,7 +1131,7 @@ a:hover{
 	clear: both;
 	float: left;
 	position: relative;
-	border: 2px solid #E5EDF4;
+	border: 2px solid #bcbcbc;
 	padding: 40px;
 	margin-bottom: 30px;
 }
@@ -1141,7 +1144,7 @@ a:hover{
 	top: 100%;
 	left: 50px;
 	border: solid transparent;
-	border-top-color: #E5EDF4;
+	border-top-color: #bcbcbc;
 	border-width: 18px 18px 0px 0px;
 }
 
@@ -1183,7 +1186,9 @@ a:hover{
 	width: 60px;
 	height: 60px;
 }
-
+.dark-theme .tokyo_tm_testimonials .details .image .main{
+	filter: invert(0);
+}
 .tokyo_tm_testimonials .details .image .main {
 	position: absolute;
 	top: 0px;
@@ -1194,6 +1199,8 @@ a:hover{
 	background-size: cover;
 	background-position: center;
 	border-radius: 100%;
+	border: 2px solid #bcbcbc;
+	padding: 5px;
 }
 
 .tokyo_tm_testimonials .details .info {

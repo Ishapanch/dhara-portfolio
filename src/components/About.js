@@ -55,12 +55,10 @@ export default function About() {
                 continuous learning and pushing creative boundaries.
               </p>
               <p>
-                Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi
-                Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu
-                Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu...
-                Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi
-                Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu Gandi Chuu... Hu
-                Gandi Chuu... Hu Gandi Chuu...
+              As Dhara Pancholi, my passion for 3D modeling knows no bounds. Sculpting and rigging are not just skills to me; they're avenues through which I express my creativity and bring visions to life. With proficiency in Blender, Maya, Photoshop, and a deep understanding of sculpting techniques, I immerse myself in crafting digital marvels that captivate and inspire.
+              </p>
+              <p>
+             Every project is an opportunity to push the limits of my imagination and technical prowess. Whether I'm shaping characters, designing environments, or animating scenes, I infuse each creation with a piece of myself, striving for perfection in every polygon. In my hands, software transforms into a medium of boundless possibilities, where art and technology converge to weave intricate worlds that leave a lasting impression on audiences.
               </p>
             </Col>
             <Col lg={12} className="tokyo_tm_short_info">
@@ -122,7 +120,7 @@ export default function About() {
               </div>
             </Col>
             <div className="tokyo_tm_button" data-position="left">
-              <a href="img/cv/1.jpg" download>
+              <a href={dummy} target="_blank">
                 <span>Download CV</span>
               </a>
             </div>

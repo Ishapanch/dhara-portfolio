@@ -6,6 +6,10 @@ import gollem from "../assets/img/portfolio/gollem.jpg";
 import lighthouse from "../assets/img/portfolio/lighthouse.jpg";
 import cup from "../assets/img/portfolio/cup.jpg";
 import castle from "../assets/img/portfolio/castle.jpg";
+import robot from "../assets/img/portfolio/robot.jpg";
+import robot2 from "../assets/img/portfolio/robot2.jpg";
+import martial from "../assets/img/portfolio/martial.jpg";
+import feather from "../assets/img/portfolio/feather.jpg";
 import raw1 from "../assets/img/portfolio/raw1.jpg";
 import raw2 from "../assets/img/portfolio/raw2.jpg";
 import raw3 from "../assets/img/portfolio/raw3.jpg";
@@ -18,6 +22,7 @@ import raw9 from "../assets/img/portfolio/raw9.jpg";
 import raw10 from "../assets/img/portfolio/raw10.jpg";
 import raw11 from "../assets/img/portfolio/raw11.jpg";
 import raw12 from "../assets/img/portfolio/raw12.jpg";
+import raw13 from "../assets/img/portfolio/suitcase-raw.jpg";
 import tool1 from "../assets/img/portfolio/tool1.jpg";
 import tool2 from "../assets/img/portfolio/tool2.jpg";
 import tool3 from "../assets/img/portfolio/tool3.jpg";
@@ -30,6 +35,8 @@ import wireframe from "../assets/img/portfolio/wireframe.jpg";
 import wireframe2 from "../assets/img/portfolio/wireframe2.jpg";
 import vid1 from "../assets/img/portfolio/video/gollem.mp4"
 import vid2 from "../assets/img/portfolio/video/chair.mp4"
+import vid3 from "../assets/img/portfolio/video/suitcase.mp4"
+import vid4 from "../assets/img/portfolio/video/robot.mp4"
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -95,6 +102,22 @@ export default function Portfolio() {
       alt: "Image1's alt text",
       src: tool8,
     },
+    {
+      alt: "Image1's alt text",
+      src: robot,
+    },
+    {
+      alt: "Image1's alt text",
+      src: robot2,
+    },
+    {
+      alt: "Image1's alt text",
+      src: martial,
+    },
+    {
+      alt: "Image1's alt text",
+      src: feather,
+    },
   ];
   const raws = [
     {
@@ -145,6 +168,10 @@ export default function Portfolio() {
       alt: "Image1's alt text",
       src: raw12,
     },
+    {
+      alt: "Image1's alt text",
+      src: raw13,
+    },
   ];
   const wireframes = [
     {
@@ -167,6 +194,16 @@ export default function Portfolio() {
       url: vid2,
       title: "Chair Video 3D",
       description: "Chair Video 3D",
+    },
+    {
+      url: vid3,
+      title: "Suitcase Video 3D",
+      description: "Suitcase Video 3D",
+    },
+    {
+      url: vid4,
+      title: "Robot Video 3D",
+      description: "Robot Video 3D",
     },
   ];
 
@@ -228,14 +265,16 @@ export default function Portfolio() {
 
                   <TabPanel>
                     <Row className="img-gal">
-                      {raws.map((raw, index) => (
-                        <Col lg={4} md={6} key={index}>
+                      {/* {raws.map((raw, index) => ( */}
+                        <Col lg={12} md={12}>
                           <ImageGallery
-                            imagesInfoArray={[raw]}
-                            columnWidth="100%"
+                            imagesInfoArray={raws.map((raw, index) => (raw))}
+                            columnCount={"auto"}
+                            columnWidth={230}
+                            gapSize={24}
                           />
                         </Col>
-                      ))}
+                      {/* ))} */}
                     </Row>
                   </TabPanel>
 
@@ -252,6 +291,7 @@ export default function Portfolio() {
                     </Row>
                   </TabPanel>
                   <TabPanel>
+                    <Row>
                     {videos.map((video, index) => (
                       <Col lg={6} md={6} className="video-thumbnail">
                         <ReactPlayer
@@ -265,6 +305,7 @@ export default function Portfolio() {
                         <p>{video.description}</p>
                       </Col>
                     ))}
+                    </Row>
                   </TabPanel>
                 </Col>
               </Row>
